@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Class</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+    body {
+        background: #1A1A1D;
+    }
+    .Div_1, .select {
+        background: #4E4E50;
+        border-radius: 15px 15px;
+        width: 50%;
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        width: 70%;
+        text-align: center;
+        
+    }
+    label {
+        color: white;
+    }
+    h2 {
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+    input {
+        width: 40%;
+        padding: 10px 10px;
+        margin: 15px 0;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        border-radius: 20px 20px;
+        position: relative;
+        left: 0%;
+        border-color: #77BFE2;
+        background: #FCE786;
+        border: 5px inset #77BFE2;
+    }
+    .btn {
+        position: static;
+        width: 30%;
+    }
+    .select_opt {
+        width: 40%;
+        position: static;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="Div_1">
+        <div>
+            <h2>New Class</h2>
+                <div>
+                    <label>Name</label>
+                    <input type="text" placeholder="Please enter your full name" name="name">
+                </div>
+                <div>
+                    <label>Description</label>
+                    <input type="text" placeholder="Please enter Description" name="description">
+                </div>
+                <div>
+                    <label>Class Code</label>
+                    <input type="text" placeholder="Please enter ClassCode" name="classCode">
+                </div>
+                <div>
+                    <label>Teacher</label>
+                    <select class="select_opt" name="teacherID">
+                        <option selected>Select Teacher</option>
+                        {{#teacher}}
+                            <option value={{id}}>{{name}}</option>
+                        {{/teacher}}
+                    </select>
+                </div>
+                <div class="btn">
+                    <input type="submit" class="btn btn-primary" value="Submit" name="submitClass">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+
+</html>

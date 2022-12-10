@@ -1,0 +1,18 @@
+{
+    "name": "terada/class",
+    "autoload": {
+        "psr-4": {
+            "Terada\\Class\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "TeradaAki",
+            "email": "terada.aki@yahoo.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.5",
+        "mustache/mustache": "^2.14"
+    }
+}
